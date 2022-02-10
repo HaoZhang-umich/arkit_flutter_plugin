@@ -740,4 +740,9 @@ class ARKitController {
     final result = await _channel.invokeMethod<Uint8List>('snapshot');
     return MemoryImage(result!);
   }
+
+  Future<Uint8List> snapshotBytes() async {
+    final result = await _channel.invokeMethod<Uint8List>('snapshot');
+    return result!;
+  }
 }
